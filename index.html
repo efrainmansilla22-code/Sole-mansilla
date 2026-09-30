@@ -3,82 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Sole Mansilla</title>
 
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #071a3d;
-    color: white;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, #073c9b 0%, #020817 45%, #01040b 100%);
+  color: white;
+  text-align: center;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(2, 8, 23, 0.96);
+  border-bottom: 2px solid #168cff;
+  padding: 15px 8px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  color: #39aaff;
 }
 
 .container {
-    max-width: 500px;
-    margin: auto;
-    padding: 40px 20px;
+  width: 94%;
+  max-width: 1100px;
+  margin: auto;
 }
 
-h1 {
-    font-size: 42px;
-    margin-bottom: 30px;
+.hero {
+  margin-top: 20px;
+  padding: 45px 20px;
+  border: 2px solid #168cff;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #031b48, #062e78, #010b20);
+  box-shadow: 0 0 30px #007bff;
 }
 
-p {
-    font-size: 24px;
-    margin-bottom: 35px;
+.logo {
+  font-size: 55px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+    0 0 10px #008cff,
+    0 0 25px #008cff;
 }
 
-a {
-    display: block;
-    background: white;
-    color: #071a3d;
-    text-decoration: none;
-    padding: 22px;
-    margin: 20px 0;
-    border-radius: 20px;
-    font-size: 28px;
-    font-weight: bold;
+.hero h2 {
+  color: #5db8ff;
+  margin: 12px 0;
+  font-size: 22px;
 }
 
-a:hover {
-    opacity: 0.9;
+.hero p {
+  font-size: 18px;
+  margin: 15px 0 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 8px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #087cff, #00b7ff);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 20px #008cff;
+}
+
+.section {
+  margin-top: 25px;
+  padding: 25px;
+  border: 1px solid #168cff;
+  border-radius: 20px;
+  background: rgba(3, 20, 55, 0.9);
+  box-shadow: 0 0 20px rgba(0, 125, 255, .45);
+}
+
+.section h2 {
+  color: #55b9ff;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.card {
+  padding: 25px 10px;
+  border: 1px solid #168cff;
+  border-radius: 15px;
+  background: #061936;
+}
+
+.card .icon {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #b8dfff;
+  font-size: 14px;
+}
+
+.contact-buttons {
+  display: grid;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact {
+  display: block;
+  padding: 18px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #006cff, #009dff);
+  border: 1px solid #55c7ff;
+  box-shadow: 0 0 15px rgba(0, 140, 255, .6);
+}
+
+.contact:hover {
+  transform: scale(1.02);
 }
 
 .footer {
-    margin-top: 60px;
+  margin-top: 30px;
+  padding: 25px 10px;
+  border-top: 1px solid #168cff;
+  color: #9ccfff;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+
+  .navbar a {
+    display: inline-block;
+    margin: 5px 4px;
+    font-size: 11px;
+  }
+
+  .logo {
+    font-size: 38px;
+  }
+
+  .hero {
+    padding: 35px 15px;
+  }
+
+  .hero h2 {
     font-size: 18px;
-    color: #bfc7d5;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<nav class="navbar">
+  <a href="#inicio">🏠 INICIO</a>
+  <a href="#juegos">🎮 JUEGOS</a>
+  <a href="#promociones">🎁 PROMOCIONES</a>
+  <a href="#seguridad">🛡️ SEGURIDAD</a>
+  <a href="#sobre-mi">👩 SOBRE MÍ</a>
+  <a href="#contacto">✉️ CONTACTO</a>
+</nav>
 
-<h1>✨ Sole Mansilla ✨</h1>
+<main class="container">
 
-<p>Bienvenidos a mi página oficial</p>
+<section class="hero" id="inicio">
+  <div class="logo">✨ Sole Mansilla ✨</div>
 
-<a href="https://www.facebook.com/share/1FGXgzT5Dz/" target="_blank">
-📘 Facebook
-</a>
+  <h2>CASINO VIRTUAL</h2>
 
-<a href="https://wa.me/2657228796" target="_blank">
-💬 WhatsApp
-</a>
+  <p>
+    Bienvenidos a mi página oficial
+  </p>
 
-<a href="https://t.me/Solemansilla" target="_blank">
-✈️ Telegram
-</a>
+  <a class="btn"
+     href="https://wa.me/542657228796"
+     target="_blank">
+    💬 CONTACTAR POR WHATSAPP
+  </a>
 
-<div class="footer">
-© Sole Mansilla
-</div>
+  <a class="btn"
+     href="https://t.me/Solemansilla"
+     target="_blank">
+    ✈️ TELEGRAM
+  </a>
+</section>
 
-</div>
 
-</body>
-</html>
+<section class="section" id="juegos">
+
+  <h2>🎮 JUEGOS</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🎰</div>
+      <h3>Joker's Jewels</h3>
+      <p>Slots y entretenimiento.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">👑</div>
+      <h3>Zeus</h3>
+      <p>Una opción clásica.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎲</div>
+      <h3>Kona</h3>
+      <p>Entretenimiento online.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎯</div>
+      <h3>Más juegos</h3>
+      <p>Consultá las opciones disponibles.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="promociones">
+
+  <h2>🎁 PROMOCIONES</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🎁</div>
+      <h3>Bono
